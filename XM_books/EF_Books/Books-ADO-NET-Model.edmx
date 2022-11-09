@@ -1,0 +1,278 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="BOOKSModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="tb_books">
+          <Key>
+            <PropertyRef Name="id_uniq" />
+          </Key>
+          <Property Name="id_uniq" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="nazvanie" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="autor" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="year_print" Type="smallint" Nullable="false" />
+          <Property Name="id_junr" Type="smallint" Nullable="false" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'BOOKS.dbo.vw_books6' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="vw_books6">
+          <Key>
+            <PropertyRef Name="nazvanie" />
+            <PropertyRef Name="autor" />
+            <PropertyRef Name="PublicYear" />
+            <PropertyRef Name="name_junr" />
+            <PropertyRef Name="id_junr" />
+            <PropertyRef Name="id_book" />
+          </Key>
+          <Property Name="nn" Type="bigint" />
+          <Property Name="nazvanie" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="autor" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="PublicYear" Type="smallint" Nullable="false" />
+          <Property Name="name_junr" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="id_junr" Type="smallint" Nullable="false" />
+          <Property Name="id_book" Type="uniqueidentifier" Nullable="false" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'BOOKS.dbo.vw_junrs_for_menu2' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="vw_junrs_for_menu2">
+          <Key>
+            <PropertyRef Name="id_value" />
+            <PropertyRef Name="nazvanie" />
+          </Key>
+          <Property Name="id_value" Type="smallint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="nazvanie" Type="nvarchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <Function Name="sp_book_delete" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="str_id_uniq" Type="varchar(max)" Mode="In" />
+        </Function>
+        <Function Name="sp_book_insert" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="str_nazvanie" Type="nvarchar(max)" Mode="In" />
+          <Parameter Name="str_autor" Type="nvarchar(max)" Mode="In" />
+          <Parameter Name="str_year_print" Type="varchar(max)" Mode="In" />
+          <Parameter Name="str_id_junr" Type="varchar(max)" Mode="In" />
+        </Function>
+        <Function Name="sp_book_insert2" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="str_nazvanie" Type="nvarchar(max)" Mode="In" />
+          <Parameter Name="str_autor" Type="nvarchar(max)" Mode="In" />
+          <Parameter Name="str_year_print" Type="varchar(max)" Mode="In" />
+          <Parameter Name="str_id_junr" Type="varchar(max)" Mode="In" />
+        </Function>
+        <Function Name="sp_book_update" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="str_id_uniq" Type="varchar(max)" Mode="In" />
+          <Parameter Name="str_nazvanie" Type="nvarchar(max)" Mode="In" />
+          <Parameter Name="str_autor" Type="nvarchar(max)" Mode="In" />
+          <Parameter Name="str_year_print" Type="varchar(max)" Mode="In" />
+          <Parameter Name="str_id_junr" Type="varchar(max)" Mode="In" />
+        </Function>
+        <EntityContainer Name="BOOKSModelStoreContainer">
+          <EntitySet Name="tb_books" EntityType="Self.tb_books" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="vw_books6" EntityType="Self.vw_books6" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [vw_books6].[nn] AS [nn], 
+    [vw_books6].[nazvanie] AS [nazvanie], 
+    [vw_books6].[autor] AS [autor], 
+    [vw_books6].[PublicYear] AS [PublicYear], 
+    [vw_books6].[name_junr] AS [name_junr], 
+    [vw_books6].[id_junr] AS [id_junr], 
+    [vw_books6].[id_book] AS [id_book]
+    FROM [dbo].[vw_books6] AS [vw_books6]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="vw_junrs_for_menu2" EntityType="Self.vw_junrs_for_menu2" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [vw_junrs_for_menu2].[id_value] AS [id_value], 
+    [vw_junrs_for_menu2].[nazvanie] AS [nazvanie]
+    FROM [dbo].[vw_junrs_for_menu2] AS [vw_junrs_for_menu2]</DefiningQuery>
+          </EntitySet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="BOOKSModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="BOOKSEntities" annotation:LazyLoadingEnabled="true" >
+          <EntitySet Name="tb_books" EntityType="BOOKSModel.tb_books" />
+          <EntitySet Name="vw_books6" EntityType="BOOKSModel.vw_books6" />
+          <EntitySet Name="vw_junrs_for_menu2" EntityType="BOOKSModel.vw_junrs_for_menu2" />
+          <FunctionImport Name="sp_book_delete" ReturnType="Collection(BOOKSModel.sp_book_delete_Result)">
+          <Parameter Name="str_id_uniq" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="sp_book_insert" ReturnType="Collection(BOOKSModel.sp_book_insert_Result)">
+            <Parameter Name="str_nazvanie" Mode="In" Type="String" />
+            <Parameter Name="str_autor" Mode="In" Type="String" />
+            <Parameter Name="str_year_print" Mode="In" Type="String" />
+            <Parameter Name="str_id_junr" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="sp_book_update" ReturnType="Collection(BOOKSModel.sp_book_update_Result)">
+            <Parameter Name="str_id_uniq" Mode="In" Type="String" />
+            <Parameter Name="str_nazvanie" Mode="In" Type="String" />
+            <Parameter Name="str_autor" Mode="In" Type="String" />
+            <Parameter Name="str_year_print" Mode="In" Type="String" />
+            <Parameter Name="str_id_junr" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="sp_book_insert2" ReturnType="Collection(BOOKSModel.sp_book_insert2_Result)">
+            <Parameter Name="str_nazvanie" Mode="In" Type="String" />
+            <Parameter Name="str_autor" Mode="In" Type="String" />
+            <Parameter Name="str_year_print" Mode="In" Type="String" />
+            <Parameter Name="str_id_junr" Mode="In" Type="String" />
+          </FunctionImport>
+        </EntityContainer>
+        <EntityType Name="tb_books">
+          <Key>
+            <PropertyRef Name="id_uniq" />
+          </Key>
+          <Property Name="id_uniq" Type="Guid" Nullable="false" />
+          <Property Name="nazvanie" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="autor" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="year_print" Type="Int16" Nullable="false" />
+          <Property Name="id_junr" Type="Int16" Nullable="false" />
+        </EntityType>
+        <EntityType Name="vw_books6">
+          <Key>
+            <PropertyRef Name="nazvanie" />
+            <PropertyRef Name="autor" />
+            <PropertyRef Name="PublicYear" />
+            <PropertyRef Name="name_junr" />
+            <PropertyRef Name="id_junr" />
+            <PropertyRef Name="id_book" />
+          </Key>
+          <Property Name="nn" Type="Int64" />
+          <Property Name="nazvanie" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="autor" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="PublicYear" Type="Int16" Nullable="false" />
+          <Property Name="name_junr" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="id_junr" Type="Int16" Nullable="false" />
+          <Property Name="id_book" Type="Guid" Nullable="false" />
+        </EntityType>
+        <EntityType Name="vw_junrs_for_menu2">
+          <Key>
+            <PropertyRef Name="id_value" />
+            <PropertyRef Name="nazvanie" />
+          </Key>
+          <Property Name="id_value" Type="Int16" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="nazvanie" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <ComplexType Name="sp_book_delete_Result">
+          <Property Type="Int32" Name="Out_result_error" Nullable="true" />
+          <Property Type="String" Name="Out_ERROR" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="sp_book_insert_Result">
+          <Property Type="Int32" Name="Out_result_error" Nullable="true" />
+          <Property Type="String" Name="In_param_nazvanie" Nullable="true" />
+          <Property Type="String" Name="In_param_autor" Nullable="true" />
+          <Property Type="String" Name="In_param_year_print" Nullable="true" />
+          <Property Type="String" Name="In_param_id_junr" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="sp_book_update_Result">
+          <Property Type="Int32" Name="Out_result_error" Nullable="true" />
+          <Property Type="String" Name="Out_ERROR" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="sp_book_insert2_Result">
+          <Property Type="Int32" Name="Out_result_error" Nullable="true" />
+          <Property Type="Guid" Name="id_uniq" Nullable="true" />
+          <Property Type="String" Name="In_param_nazvanie" Nullable="true" />
+          <Property Type="String" Name="In_param_autor" Nullable="true" />
+          <Property Type="String" Name="In_param_year_print" Nullable="true" />
+          <Property Type="String" Name="In_param_id_junr" Nullable="true" />
+        </ComplexType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="BOOKSModelStoreContainer" CdmEntityContainer="BOOKSEntities" >
+          <EntitySetMapping Name="tb_books">
+            <EntityTypeMapping TypeName="BOOKSModel.tb_books">
+              <MappingFragment StoreEntitySet="tb_books">
+                <ScalarProperty Name="id_junr" ColumnName="id_junr" />
+                <ScalarProperty Name="year_print" ColumnName="year_print" />
+                <ScalarProperty Name="autor" ColumnName="autor" />
+                <ScalarProperty Name="nazvanie" ColumnName="nazvanie" />
+                <ScalarProperty Name="id_uniq" ColumnName="id_uniq" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="vw_books6">
+            <EntityTypeMapping TypeName="BOOKSModel.vw_books6">
+              <MappingFragment StoreEntitySet="vw_books6">
+                <ScalarProperty Name="id_book" ColumnName="id_book" />
+                <ScalarProperty Name="id_junr" ColumnName="id_junr" />
+                <ScalarProperty Name="name_junr" ColumnName="name_junr" />
+                <ScalarProperty Name="PublicYear" ColumnName="PublicYear" />
+                <ScalarProperty Name="autor" ColumnName="autor" />
+                <ScalarProperty Name="nazvanie" ColumnName="nazvanie" />
+                <ScalarProperty Name="nn" ColumnName="nn" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="vw_junrs_for_menu2">
+            <EntityTypeMapping TypeName="BOOKSModel.vw_junrs_for_menu2">
+              <MappingFragment StoreEntitySet="vw_junrs_for_menu2">
+                <ScalarProperty Name="nazvanie" ColumnName="nazvanie" />
+                <ScalarProperty Name="id_value" ColumnName="id_value" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="sp_book_delete" FunctionName="BOOKSModel.Store.sp_book_delete">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="BOOKSModel.sp_book_delete_Result">
+                <ScalarProperty Name="Out_result_error" ColumnName="Out_result_error" />
+                <ScalarProperty Name="Out_ERROR" ColumnName="Out_ERROR" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_book_insert" FunctionName="BOOKSModel.Store.sp_book_insert">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="BOOKSModel.sp_book_insert_Result">
+                <ScalarProperty Name="Out_result_error" ColumnName="Out_result_error" />
+                <ScalarProperty Name="In_param_nazvanie" ColumnName="In_param_nazvanie" />
+                <ScalarProperty Name="In_param_autor" ColumnName="In_param_autor" />
+                <ScalarProperty Name="In_param_year_print" ColumnName="In_param_year_print" />
+                <ScalarProperty Name="In_param_id_junr" ColumnName="In_param_id_junr" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_book_update" FunctionName="BOOKSModel.Store.sp_book_update">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="BOOKSModel.sp_book_update_Result">
+                <ScalarProperty Name="Out_result_error" ColumnName="Out_result_error" />
+                <ScalarProperty Name="Out_ERROR" ColumnName="Out_ERROR" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_book_insert2" FunctionName="BOOKSModel.Store.sp_book_insert2">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="BOOKSModel.sp_book_insert2_Result">
+                <ScalarProperty Name="Out_result_error" ColumnName="Out_result_error" />
+                <ScalarProperty Name="id_uniq" ColumnName="id_uniq" />
+                <ScalarProperty Name="In_param_nazvanie" ColumnName="In_param_nazvanie" />
+                <ScalarProperty Name="In_param_autor" ColumnName="In_param_autor" />
+                <ScalarProperty Name="In_param_year_print" ColumnName="In_param_year_print" />
+                <ScalarProperty Name="In_param_id_junr" ColumnName="In_param_id_junr" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

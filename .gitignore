@@ -1,0 +1,20 @@
+# 2022-11-08
+#
+# project: "XM_books" ----> C:\Users\j\source\repos\BOOKS\XM_books
+#
+# git ignore (file(s) and folder(s)):
+#
+# -Vsio chto v papke: C:\Users\j\source\repos\BOOKS\XM_books\pojasnitel`naja_zapiska\*.*
+
+
+XM_books/pojasnitel`naja_zapiska/
+
+XM_books/obj/Debug/
+
+
+# j@SIGMA02 MINGW64 ~/source/repos/BOOKS
+# $ ls
+# BOOKS.sln  XM_books/  packages/
+#
+# j@SIGMA02 MINGW64 ~/source/repos/BOOKS
+# $
