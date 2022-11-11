@@ -7,8 +7,10 @@
 # mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm
 
 XM_books/pojasnitel`naja_zapiska/
+XM_books/pojasnitel_naja--zapiska/
 
 XM_books/obj/Debug/
+XM_books/obj/Release/
 
 XM_books/bin/Debug/
 
@@ -24,3 +26,6 @@ XM_books/bin/Debug/
 #
 # 2022-11-10
 # $ git rm -r --cached XM_books/bin/Debug/
+#
+#
+#
