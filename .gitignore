@@ -10,11 +10,11 @@
 XM_books/pojasnitel_naja--zapiska/
 
 XM_books/obj/
-# XM_books/obj/Debug/
+# XM_books/obj/Debug/   2022-11-12
 # XM_books/obj/Release/
 
 XM_books/bin/
-# XM_books/bin/Debug/
+# XM_books/bin/Debug/   2022-11-12
 # XM_books/bin/Release/
 
 .vs/BOOKS/
