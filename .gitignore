@@ -6,14 +6,16 @@
 # -Vsio chto v papke: C:\Users\j\source\repos\BOOKS\XM_books\pojasnitel`naja_zapiska\*.*
 # mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm
 
-XM_books/pojasnitel`naja_zapiska/
+#XM_books/pojasnitel`naja_zapiska/
 XM_books/pojasnitel_naja--zapiska/
 
-XM_books/obj/Debug/
-XM_books/obj/Release/
+XM_books/obj/
+# XM_books/obj/Debug/
+# XM_books/obj/Release/
 
-XM_books/bin/Debug/
-XM_books/bin/Release/
+XM_books/bin/
+# XM_books/bin/Debug/
+# XM_books/bin/Release/
 
 .vs/BOOKS/
 

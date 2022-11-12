@@ -48,7 +48,8 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>pojasnitel`naja_zapiska\image\BOOKS-BIG.ico</ApplicationIcon>
+    <ApplicationIcon>
+    </ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
@@ -176,30 +177,9 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
-    <Content Include="pojasnitel`naja_zapiska\draft-Model_tb_book.txt" />
-    <Content Include="pojasnitel`naja_zapiska\draft-Model_vw_book.txt" />
-    <Content Include="pojasnitel`naja_zapiska\draft-BookForm2.txt" />
-    <Content Include="pojasnitel`naja_zapiska\draft-MainForm.txt" />
-    <Content Include="pojasnitel`naja_zapiska\image\BO-my-238-212.ico" />
     <Content Include="asserts\img\BO-my-048-043.ico" />
-    <Content Include="pojasnitel`naja_zapiska\image\BO-my-048-043.png" />
-    <Content Include="pojasnitel`naja_zapiska\image\BOOKS-256-256.ico" />
     <Content Include="asserts\img\BOOKS_320-320.jpg" />
-    <Content Include="pojasnitel`naja_zapiska\image\BOOKS-320-320.jpg" />
     <Content Include="asserts\img\BOOKS-032-032.ico" />
-    <Content Include="pojasnitel`naja_zapiska\image\BOOKS-032-032.jpg" />
-    <Content Include="pojasnitel`naja_zapiska\image\BOOKS-032-032.png" />
-    <Content Include="pojasnitel`naja_zapiska\image\exit-039-039.ico" />
-    <Content Include="pojasnitel`naja_zapiska\image\exit-048-048.ico" />
-    <Content Include="pojasnitel`naja_zapiska\image\seach-026-026.ico" />
-    <Content Include="pojasnitel`naja_zapiska\image\seach-026-026.png" />
-    <Content Include="pojasnitel`naja_zapiska\image\seach-032-037.ico" />
-    <Content Include="pojasnitel`naja_zapiska\image\seach-032-037.jpg" />
-    <Content Include="pojasnitel`naja_zapiska\image\seach-032-037.bmp" />
-    <Content Include="pojasnitel`naja_zapiska\PODPISI-rus.txt" />
-    <Content Include="pojasnitel`naja_zapiska\image\BOOKS-BIG.ico" />
-    <Content Include="pojasnitel`naja_zapiska\draft-genre_RJ_Repository.txt" />
-    <Content Include="pojasnitel`naja_zapiska\image\ef-books.jpg" />
     <Content Include="EF_Books\Books-ADO-NET-Model.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>Books-ADO-NET-Model.Context.cs</LastGenOutput>
@@ -210,8 +190,6 @@
       <DependentUpon>Books-ADO-NET-Model.edmx</DependentUpon>
       <LastGenOutput>Books-ADO-NET-Model.cs</LastGenOutput>
     </Content>
-    <Content Include="pojasnitel`naja_zapiska\image\вёрстка-окна-Books.jpg" />
-    <Content Include="pojasnitel`naja_zapiska\вёрстка-окна-Books.jpg" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
