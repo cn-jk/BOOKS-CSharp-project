@@ -28,8 +28,6 @@ namespace XM_books.Views
     }
 }
 
-        //-//-//-//-//  bool IsCreatedNextNewBook { get; set; }
-
         // Exit/Close
         // btnClose ?????
         // 2022-10-12 this event must be internal !!   --->   event EventHandler ExitEvent;

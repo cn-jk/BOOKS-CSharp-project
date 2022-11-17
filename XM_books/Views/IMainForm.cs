@@ -36,5 +36,3 @@ namespace XM_books.Views
        event EventHandler SaveEvent;
        event EventHandler CancelEvent;
        */
-       
-       // // // // // void Update_view(IList<Models.IModel_genre> _lstJunrs, List<Models.Model_vw_book> _lstBooks);
