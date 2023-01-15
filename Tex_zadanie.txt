@@ -1,7 +1,7 @@
 ﻿Техническое задание.
 
-1. Win Forms
-2. MVC -- MVP (Model View Presenter)
+1. C#, WinForms
+2. MVP (Model-View-Presenter)
 3. MS SQL Server Express
 4. Entity Framework
 5. LINQ to SQL
