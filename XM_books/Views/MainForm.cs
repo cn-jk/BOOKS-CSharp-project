@@ -150,13 +150,11 @@ dgbBooks_Opisanie.Add(new Dictionary<string, string>() {{"DataPropertyName", "id
             //_dGrid.Size = new System.Drawing.Size(720, 240);
             //_dGrid.Location = new System.Drawing.Point(24, 77);
 
+            //
+            //Generale mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm
             _dGrid.Anchor = (AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right);
-
             _dGrid.ScrollBars = ScrollBars.Both;
             _dGrid.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            _dGrid.DefaultCellStyle.SelectionBackColor = Color.DarkSeaGreen; //.Honeydew; //.Red; //.DarkTurquoise;
-            //
-            //Generale
             _dGrid.AllowDrop                = false;
             _dGrid.AllowUserToAddRows       = false;
             _dGrid.AllowUserToDeleteRows    = false;
@@ -169,24 +167,32 @@ dgbBooks_Opisanie.Add(new Dictionary<string, string>() {{"DataPropertyName", "id
             _dGrid.EditMode = DataGridViewEditMode.EditOnEnter;
             _dGrid.MultiSelect = false;
             _dGrid.ReadOnly = true;
+
+            _dGrid.DefaultCellStyle.SelectionBackColor = Color.DarkSeaGreen; //.Honeydew; //.Red; //.DarkTurquoise;
             //
-            //Header
+            //Header mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm
             _dGrid.EnableHeadersVisualStyles = false;
             _dGrid.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            _dGrid.ColumnHeadersHeight = 40;
-            _dGrid.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
-            _dGrid.ColumnHeadersDefaultCellStyle.Font = new Font("MS Reference Sans Serif", 12, FontStyle.Bold);
+            _dGrid.ColumnHeadersHeight = 48;
             _dGrid.ColumnHeadersDefaultCellStyle.BackColor = Color.DarkGreen; //.FromArgb(37, 37, 38);
+            _dGrid.ColumnHeadersDefaultCellStyle.Font = new Font("MS Reference Sans Serif", 12, FontStyle.Bold);
             _dGrid.ColumnHeadersDefaultCellStyle.ForeColor          = Color.White;
-            _dGrid.ColumnHeadersDefaultCellStyle.SelectionBackColor = Color.FromArgb(37, 37, 38);
+            //
+            //Header -- Selection -- Style
+            _dGrid.ColumnHeadersDefaultCellStyle.SelectionBackColor = Color.DarkGreen; //.FromArgb(37, 37, 38);
             _dGrid.ColumnHeadersDefaultCellStyle.SelectionForeColor = Color.White;
             //
-            //Table
-            _dGrid.SelectionMode   = DataGridViewSelectionMode.FullRowSelect;
-            _dGrid.AlternatingRowsDefaultCellStyle.BackColor          = Color.FromArgb(238, 239, 249);
-            _dGrid.AlternatingRowsDefaultCellStyle.SelectionBackColor = Color.DarkSeaGreen; // BlueViolet;
-            _dGrid.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
-
+            //Header -- Border -- Style
+            _dGrid.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None; //.Raised;
+            _dGrid.AdvancedColumnHeadersBorderStyle.Top = DataGridViewAdvancedCellBorderStyle.InsetDouble; ; //.OutsetDouble
+            _dGrid.AdvancedColumnHeadersBorderStyle.Left = DataGridViewAdvancedCellBorderStyle.None;
+            _dGrid.AdvancedColumnHeadersBorderStyle.Right = DataGridViewAdvancedCellBorderStyle.None;
+            _dGrid.AdvancedColumnHeadersBorderStyle.Bottom = DataGridViewAdvancedCellBorderStyle.InsetDouble; ;
+            //
+            //Table mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm
+            // ---ZEBRA---_dGrid.AlternatingRowsDefaultCellStyle.BackColor          = Color.FromArgb(238, 239, 249);
+            // ---ZEBRA---_dGrid.AlternatingRowsDefaultCellStyle.SelectionBackColor = Color.DarkSeaGreen; // BlueViolet;
+            _dGrid.CellBorderStyle = DataGridViewCellBorderStyle.SunkenHorizontal; //.SingleHorizontal;
             _dGrid.DefaultCellStyle.SelectionBackColor = Color.DarkSeaGreen;  //.BlueViolet //.Honeydew; //.Red; //.DarkTurquoise;
             _dGrid.DefaultCellStyle.SelectionForeColor = Color.DarkViolet; //.BlueViolet; //.Yellow;
 

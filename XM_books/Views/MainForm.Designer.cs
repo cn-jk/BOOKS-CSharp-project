@@ -62,7 +62,7 @@
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1144, 120);
+            this.panel1.Size = new System.Drawing.Size(1812, 120);
             this.panel1.TabIndex = 0;
             // 
             // panel5
@@ -77,7 +77,7 @@
             this.panel5.Location = new System.Drawing.Point(78, 34);
             this.panel5.Margin = new System.Windows.Forms.Padding(0);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(986, 48);
+            this.panel5.Size = new System.Drawing.Size(1654, 48);
             this.panel5.TabIndex = 0;
             // 
             // label1
@@ -100,7 +100,7 @@
             this.btnSearch.BackColor = System.Drawing.Color.Khaki;
             this.btnSearch.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.btnSearch.Location = new System.Drawing.Point(826, 0);
+            this.btnSearch.Location = new System.Drawing.Point(1494, 0);
             this.btnSearch.Margin = new System.Windows.Forms.Padding(0);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(160, 48);
@@ -117,7 +117,7 @@
             this.txtSearch.Location = new System.Drawing.Point(480, 0);
             this.txtSearch.Margin = new System.Windows.Forms.Padding(0);
             this.txtSearch.Name = "txtSearch";
-            this.txtSearch.Size = new System.Drawing.Size(376, 44);
+            this.txtSearch.Size = new System.Drawing.Size(1044, 44);
             this.txtSearch.TabIndex = 1;
             // 
             // cmbJunrs
@@ -143,7 +143,7 @@
             this.panel2.Margin = new System.Windows.Forms.Padding(80, 0, 80, 0);
             this.panel2.Name = "panel2";
             this.panel2.Padding = new System.Windows.Forms.Padding(80, 0, 80, 0);
-            this.panel2.Size = new System.Drawing.Size(1144, 502);
+            this.panel2.Size = new System.Drawing.Size(1812, 502);
             this.panel2.TabIndex = 1;
             // 
             // panel3
@@ -155,7 +155,7 @@
             this.panel3.Controls.Add(this.statusStrip1);
             this.panel3.Location = new System.Drawing.Point(0, 377);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1144, 125);
+            this.panel3.Size = new System.Drawing.Size(1812, 125);
             this.panel3.TabIndex = 3;
             // 
             // panel4
@@ -168,7 +168,7 @@
             this.panel4.Location = new System.Drawing.Point(78, 35);
             this.panel4.Margin = new System.Windows.Forms.Padding(0);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(986, 48);
+            this.panel4.Size = new System.Drawing.Size(1654, 48);
             this.panel4.TabIndex = 3;
             // 
             // btnExit
@@ -176,7 +176,7 @@
             this.btnExit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnExit.BackColor = System.Drawing.Color.Khaki;
             this.btnExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnExit.Location = new System.Drawing.Point(825, 0);
+            this.btnExit.Location = new System.Drawing.Point(1493, 0);
             this.btnExit.MinimumSize = new System.Drawing.Size(22, 48);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(160, 48);
@@ -236,7 +236,7 @@
             this.statusStrip1.Location = new System.Drawing.Point(0, 86);
             this.statusStrip1.Name = "statusStrip1";
             this.statusStrip1.Padding = new System.Windows.Forms.Padding(2, 0, 14, 0);
-            this.statusStrip1.Size = new System.Drawing.Size(1144, 39);
+            this.statusStrip1.Size = new System.Drawing.Size(1812, 39);
             this.statusStrip1.TabIndex = 2;
             this.statusStrip1.Text = "statusStrip1";
             // 
@@ -290,7 +290,7 @@
             this.dgvBooks.RowHeadersWidth = 62;
             this.dgvBooks.RowTemplate.Height = 28;
             this.dgvBooks.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvBooks.Size = new System.Drawing.Size(984, 380);
+            this.dgvBooks.Size = new System.Drawing.Size(1652, 380);
             this.dgvBooks.TabIndex = 0;
             this.dgvBooks.SelectionChanged += new System.EventHandler(this.dgvBooks_SelectionChanged);
             // 
@@ -299,11 +299,11 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Window;
-            this.ClientSize = new System.Drawing.Size(1144, 622);
+            this.ClientSize = new System.Drawing.Size(1812, 622);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.MinimumSize = new System.Drawing.Size(1158, 651);
+            this.MinimumSize = new System.Drawing.Size(1258, 651);
             this.Name = "MainForm";
             this.Text = "КНИГИ/BOOKS";
             this.Load += new System.EventHandler(this.OnLoad);

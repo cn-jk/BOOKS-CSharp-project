@@ -86,12 +86,12 @@
             this.btnExit.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnExit.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.btnExit.Location = new System.Drawing.Point(224, 0);
+            this.btnExit.Location = new System.Drawing.Point(234, 0);
             this.btnExit.Margin = new System.Windows.Forms.Padding(0);
             this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(120, 32);
+            this.btnExit.Size = new System.Drawing.Size(110, 32);
             this.btnExit.TabIndex = 1;
-            this.btnExit.Text = "Выйти";
+            this.btnExit.Text = "&Выйти";
             this.btnExit.UseVisualStyleBackColor = false;
             // 
             // btnSave
@@ -101,7 +101,7 @@
             this.btnSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.btnSave.Location = new System.Drawing.Point(0, 0);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(160, 32);
+            this.btnSave.Size = new System.Drawing.Size(140, 32);
             this.btnSave.TabIndex = 0;
             this.btnSave.Text = "Доба//Сохр";
             this.btnSave.UseVisualStyleBackColor = false;
@@ -141,10 +141,10 @@
             this.cmbJunrs.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.cmbJunrs.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.cmbJunrs.FormattingEnabled = true;
-            this.cmbJunrs.Location = new System.Drawing.Point(0, 20);
+            this.cmbJunrs.Location = new System.Drawing.Point(0, 11);
             this.cmbJunrs.Margin = new System.Windows.Forms.Padding(0, 5, 0, 5);
             this.cmbJunrs.Name = "cmbJunrs";
-            this.cmbJunrs.Size = new System.Drawing.Size(156, 28);
+            this.cmbJunrs.Size = new System.Drawing.Size(156, 37);
             this.cmbJunrs.TabIndex = 1;
             // 
             // label4
@@ -156,7 +156,7 @@
             this.label4.Location = new System.Drawing.Point(0, 0);
             this.label4.Margin = new System.Windows.Forms.Padding(0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(190, 20);
+            this.label4.Size = new System.Drawing.Size(293, 29);
             this.label4.TabIndex = 0;
             this.label4.Text = "Жанр книги*:                   _";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -176,22 +176,22 @@
             this.txtPrintYear.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtPrintYear.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.txtPrintYear.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.txtPrintYear.Location = new System.Drawing.Point(0, 26);
+            this.txtPrintYear.Location = new System.Drawing.Point(0, 15);
             this.txtPrintYear.Margin = new System.Windows.Forms.Padding(0, 5, 0, 5);
             this.txtPrintYear.Name = "txtPrintYear";
-            this.txtPrintYear.Size = new System.Drawing.Size(88, 22);
+            this.txtPrintYear.Size = new System.Drawing.Size(88, 33);
             this.txtPrintYear.TabIndex = 1;
             this.txtPrintYear.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPrintYear_KeyPress);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.White;
+            this.label3.BackColor = System.Drawing.Color.DarkKhaki;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label3.Location = new System.Drawing.Point(0, 0);
             this.label3.Margin = new System.Windows.Forms.Padding(0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(189, 20);
+            this.label3.Size = new System.Drawing.Size(282, 29);
             this.label3.TabIndex = 1;
             this.label3.Text = "Год*:                                 _";
             // 
@@ -222,7 +222,7 @@
             // 
             this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.label2.BackColor = System.Drawing.Color.White;
+            this.label2.BackColor = System.Drawing.Color.DarkKhaki;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(0, 0);
             this.label2.Margin = new System.Windows.Forms.Padding(0);
@@ -246,7 +246,7 @@
             // 
             this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.label1.BackColor = System.Drawing.Color.White;
+            this.label1.BackColor = System.Drawing.Color.DarkKhaki;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label1.Location = new System.Drawing.Point(0, 0);
             this.label1.Name = "label1";
@@ -280,7 +280,7 @@
             // 
             // BookForm2
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.CancelButton = this.btnExit;

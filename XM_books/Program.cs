@@ -29,9 +29,8 @@ namespace XM_books
             /   _model     = new EF_Repositories.book_RJ_Repository();
             */
 
-            IMainForm      view      = new MainForm();
-/**- ??? -*/IMainFormModel model     = new MainFormModel();
-            // IMainPresenter presenter = new MainPresenter(view, model);
+            IMainForm       view      = new MainForm();
+            IMainFormModel  model     = new MainFormModel();
             IMainPresenter2 presenter = new MainPresenter2(view, model);
 
             //It is 1-rst_run/General_start            

@@ -27,17 +27,37 @@ namespace XM_books.EF_Repositories
         GetAllBooks() => db.vw_books6.AsNoTracking().ToList();
 
 /**-2-*/public static IEnumerable<vw_books6>
-        GetAllBooks(short id_junr) => GetAllBooks().Where(book => book.id_junr == id_junr).ToList();
+        GetAllBooks(short id_junr) => db.vw_books6.AsNoTracking().AsQueryable()
+            .Where(book => book.id_junr == id_junr)
+            .ToList<vw_books6>();
+        //GetAllBooks(short id_junr) => GetAllBooks().Where(book => book.id_junr == id_junr).ToList();
 
 /**-3-*/public static IEnumerable<vw_books6>
-        GetAllBooks(string _search) => GetAllBooks().Where(book => vw_books6_ToString(book).Contains(_search)).ToList();
+        GetAllBooks(string _search)=> db.vw_books6.AsNoTracking().AsQueryable()
+            .Where(book => (book.nazvanie + "~" + book.autor + "~" + book.PublicYear + "~" + book.name_junr).Contains(_search))
+            .ToList<vw_books6>();
+        //GetAllBooks(string _search) => GetAllBooks().Where(book => vw_books6_ToString(book).Contains(_search)).ToList();
 
 /**-4-*/public static IEnumerable<vw_books6>
-        GetAllBooks(short id_junr, string _search) => GetAllBooks(id_junr).Where(book => vw_books6_ToString(book).Contains(_search));
+        GetAllBooks(short id_junr, string _search) => db.vw_books6.AsNoTracking().AsQueryable()
+            .Where(book => book.id_junr == id_junr)
+            .Where(book => (book.nazvanie + "~" + book.autor + "~" + book.PublicYear + "~" + book.name_junr).Contains(_search))
+            .ToList<vw_books6>();
+        //GetAllBooks(short id_junr, string _search) => GetAllBooks(id_junr).Where(book => vw_books6_ToString(book).Contains(_search));
 
         /**
         /
-        /   2022-06-30
+        /   2022-11-26 from: Youtube --> "Dflessons"
+        /
+        /   AsQueryable() --> IEnumerable vs IQueryable(... .AsQueryable()...) 
+        /   smotri: "17-Ypoki C#.Entity Framework. chastь 2.mp4",  timing -- 10:00
+        /
+        /   Error message:
+        /   An unhandled exception of type 'System.NotSupportedException' occurred in EntityFramework.SqlServer.dll
+        /   LINQ to Entities does not recognize the method 'System.String vw_books6_ToString(XM_books.EF_Books.vw_books6)' method, and this method cannot be translated into a store expression.
+        /
+        /
+        /   2022-06-30 from: Youtube --> "Dflessons"
         /
         /   AsNoTracking() --
         /   smotri: "18-Ypoki C#.Entity Framework. chast' 3.mp4",  timing -- 15:54
@@ -51,7 +71,7 @@ namespace XM_books.EF_Repositories
         /
         /   LINQ by API
         /
-        / Poisk chuvstvitelen k registru(CaseSensetive), t.e. "B" <> "b"
+        /   Poisk chuvstvitelen k registru(CaseSensetive), t.e. "B" <> "b"
         */
         public static void Create_Book(Models.IModel_tb_book bk)
         {
